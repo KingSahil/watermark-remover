@@ -1,0 +1,12 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+opencv-python>=4.10
+numpy>=2.0
+Pillow>=10.0
+transformers>=4.44
+diffusers>=0.31
+accelerate>=0.34
+# torch: install the CUDA 12.8 build explicitly:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+torch>=2.11

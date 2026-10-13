@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #ffffff;
+  --color-canvas-soft: #f3f3f3;
+  --color-field: #f0f0f0;
+  --color-hairline-soft: #f0f0f0;
+  --color-hairline: #e0e0e0;
+  --color-ink: #141414;
+  --color-ink-soft: #262626;
+  --color-muted: #707070;
+  --color-faint: #adadad;
+  --color-accent: #0066ff;
+
+  --radius-sm: 16px;
+  --radius-md: 24px;
+
+  --shadow-modal: 0 24px 64px -24px rgb(20 20 20 / 0.28), 0 8px 24px -12px rgb(20 20 20 / 0.14);
+
+  --animate-rise: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fade: fade 0.35s ease-out both;
+  --animate-slide-up: slide-up 0.34s cubic-bezier(0.16, 1, 0.3, 1) both;
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-geo), var(--font-inter), ui-sans-serif, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #141414;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background-color: #141414;
+  color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
